@@ -202,23 +202,23 @@
     <div class="px-6 pt-6 pb-2 grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div class="rounded-xl px-5 py-4 card-hover" style="background:#27303d; border:1px solid rgba(245,87,148,0.1);">
         <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Localização</p>
-        <p class="text-xl font-bold text-white">São Paulo</p>
-        <p class="text-xs mt-1" style="color:#f55794;">Atualizado agora</p>
+        <p class="text-xl font-bold text-gray-500">--</p>
+        <p class="text-xs mt-1 text-gray-600">Aguardando</p>
       </div>
       <div class="rounded-xl px-5 py-4 card-hover" style="background:#27303d; border:1px solid rgba(245,87,148,0.1);">
         <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Mensagens</p>
-        <p class="text-xl font-bold text-white">48</p>
-        <p class="text-xs mt-1" style="color:#f55794;">12 não lidas</p>
+        <p class="text-xl font-bold text-gray-500">--</p>
+        <p class="text-xs mt-1 text-gray-600">Aguardando</p>
       </div>
       <div class="rounded-xl px-5 py-4 card-hover" style="background:#27303d; border:1px solid rgba(245,87,148,0.1);">
         <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Chamadas</p>
-        <p class="text-xl font-bold text-white">27</p>
-        <p class="text-xs mt-1" style="color:#f55794;">Hoje</p>
+        <p class="text-xl font-bold text-gray-500">--</p>
+        <p class="text-xs mt-1 text-gray-600">Aguardando</p>
       </div>
       <div class="rounded-xl px-5 py-4 card-hover" style="background:#27303d; border:1px solid rgba(245,87,148,0.1);">
         <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Fotos</p>
-        <p class="text-xl font-bold text-white">134</p>
-        <p class="text-xs mt-1" style="color:#f55794;">18 novas</p>
+        <p class="text-xl font-bold text-gray-500">--</p>
+        <p class="text-xs mt-1 text-gray-600">Aguardando</p>
       </div>
     </div>
 
@@ -248,163 +248,99 @@
 
       <!-- GPS TAB -->
       <div id="tab-gps" class="fade-in">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-          <!-- Map -->
-          <div class="lg:col-span-2 rounded-2xl overflow-hidden relative"
-               style="height:420px; background:#27303d; border:1px solid rgba(245,87,148,0.12);">
-            <div class="absolute inset-0 map-grid"></div>
-            <div class="absolute inset-0"
-                 style="background: radial-gradient(ellipse at 50% 50%, transparent 55%, #1f2229 100%);"></div>
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 420" preserveAspectRatio="none">
-              <!-- Streets -->
-              <line x1="0" y1="210" x2="600" y2="210" stroke="rgba(245,87,148,0.12)" stroke-width="3"/>
-              <line x1="300" y1="0" x2="300" y2="420" stroke="rgba(245,87,148,0.12)" stroke-width="3"/>
-              <line x1="0" y1="140" x2="600" y2="280" stroke="rgba(245,87,148,0.07)" stroke-width="2"/>
-              <line x1="0" y1="310" x2="600" y2="140" stroke="rgba(245,87,148,0.07)" stroke-width="2"/>
-              <!-- Blocks -->
-              <rect x="120" y="80"  width="100" height="70" rx="4" fill="rgba(51,45,70,0.5)" stroke="rgba(245,87,148,0.08)" stroke-width="1"/>
-              <rect x="260" y="80"  width="80"  height="60" rx="4" fill="rgba(51,45,70,0.5)" stroke="rgba(245,87,148,0.08)" stroke-width="1"/>
-              <rect x="380" y="80"  width="110" height="80" rx="4" fill="rgba(51,45,70,0.5)" stroke="rgba(245,87,148,0.08)" stroke-width="1"/>
-              <rect x="100" y="250" width="90"  height="80" rx="4" fill="rgba(51,45,70,0.5)" stroke="rgba(245,87,148,0.08)" stroke-width="1"/>
-              <rect x="250" y="270" width="120" height="90" rx="4" fill="rgba(51,45,70,0.5)" stroke="rgba(245,87,148,0.08)" stroke-width="1"/>
-              <rect x="400" y="250" width="100" height="70" rx="4" fill="rgba(51,45,70,0.5)" stroke="rgba(245,87,148,0.08)" stroke-width="1"/>
-              <!-- Route trail -->
-              <polyline points="180,350 220,310 260,285 290,240 305,210"
-                        fill="none" stroke="#f55794" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.55"/>
-              <circle cx="180" cy="350" r="4" fill="#c64595" opacity="0.5"/>
-              <circle cx="220" cy="310" r="4" fill="#c64595" opacity="0.6"/>
-              <circle cx="260" cy="285" r="4" fill="#c64595" opacity="0.7"/>
-              <circle cx="290" cy="240" r="5" fill="#c64595" opacity="0.8"/>
-              <!-- Live ping -->
-              <circle cx="305" cy="210" r="14" fill="#f55794" opacity="0.15">
-                <animate attributeName="r" from="10" to="22" dur="1.8s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" from="0.3" to="0" dur="1.8s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="305" cy="210" r="7" fill="#f55794"/>
-              <circle cx="305" cy="210" r="3.5" fill="white"/>
+        <div class="flex flex-col items-center justify-center py-20 px-4">
+          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6"
+               style="background:rgba(245,87,148,0.1); border:2px solid rgba(245,87,148,0.25);">
+            <svg class="w-9 h-9" style="color:#f55794;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8.684 13.342C8.129 12.768 7.5 12 7.5 11c0-1.594 1.968-3.5 4.5-3.5s4.5 1.906 4.5 3.5c0 1-.629 1.768-1.184 2.342-.564.582-1.316 1.158-1.316 2.658h-4c0-1.5-.752-2.076-1.316-2.658z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
             </svg>
-            <!-- Coords badge -->
-            <div class="absolute bottom-4 left-4 px-3 py-2 rounded-xl text-xs font-mono"
-                 style="background:rgba(27,32,41,0.92); border:1px solid rgba(245,87,148,0.2); color:#f55794;">
-              <div class="text-gray-400 text-xs mb-0.5">Coordenadas atuais</div>
-              <span>-23.561684, -46.655981</span>
-            </div>
-            <!-- Zoom -->
-            <div class="absolute top-4 right-4 flex flex-col gap-1">
-              <button class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white"
-                      style="background:#332d46; border:1px solid rgba(245,87,148,0.2);"
-                      onmouseover="this.style.borderColor='#f55794'" onmouseout="this.style.borderColor='rgba(245,87,148,0.2)'">+</button>
-              <button class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white"
-                      style="background:#332d46; border:1px solid rgba(245,87,148,0.2);"
-                      onmouseover="this.style.borderColor='#f55794'" onmouseout="this.style.borderColor='rgba(245,87,148,0.2)'">−</button>
-            </div>
-            <!-- Label -->
-            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg text-xs font-medium"
-                 style="background:rgba(245,87,148,0.15); color:#f55794;">Mapa ao vivo</div>
           </div>
-
-          <!-- Location history -->
-          <div class="rounded-2xl p-5 flex flex-col" style="background:#27303d; border:1px solid rgba(245,87,148,0.12); max-height:420px;">
-            <h3 class="text-sm font-semibold text-white mb-4 flex items-center gap-2 flex-shrink-0">
-              <svg class="w-4 h-4" style="color:#f55794;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <h2 class="text-xl font-bold text-white mb-2">Primeiro instale no celular</h2>
+          <p class="text-sm text-gray-400 text-center max-w-md mb-8">Para visualizar a localização em tempo real, instale o aplicativo Hispy no dispositivo que deseja monitorar.</p>
+          <button class="px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-200 active:scale-95"
+                  style="background: linear-gradient(135deg, #f55794, #c64595);"
+                  onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
               </svg>
-              Histórico de localizações
-            </h3>
-            <div id="gpsHistoryList" class="space-y-2 overflow-y-auto flex-1"></div>
-          </div>
+              Chamar suporte
+            </span>
+          </button>
         </div>
       </div>
 
       <!-- MESSAGES TAB -->
       <div id="tab-messages" class="hidden fade-in">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <!-- Contacts -->
-          <div class="rounded-2xl overflow-hidden flex flex-col"
-               style="background:#27303d; border:1px solid rgba(245,87,148,0.12); max-height:580px;">
-            <div class="p-4 border-b flex-shrink-0" style="border-color:rgba(245,87,148,0.1);">
-              <div class="relative">
-                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                </svg>
-                <input type="text" placeholder="Buscar contato..."
-                       class="w-full pl-9 pr-3 py-2.5 rounded-xl text-sm text-white placeholder-gray-500"
-                       style="background:#1f2229; border:1px solid #332d46;"
-                       onfocus="this.style.borderColor='#f55794'" onblur="this.style.borderColor='#332d46'" />
-              </div>
-            </div>
-            <div id="contactList" class="overflow-y-auto flex-1"></div>
+        <div class="flex flex-col items-center justify-center py-20 px-4">
+          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6"
+               style="background:rgba(245,87,148,0.1); border:2px solid rgba(245,87,148,0.25);">
+            <svg class="w-9 h-9" style="color:#f55794;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
           </div>
-          <!-- Chat -->
-          <div class="lg:col-span-2 rounded-2xl flex flex-col"
-               style="background:#27303d; border:1px solid rgba(245,87,148,0.12); max-height:580px;">
-            <div class="p-4 border-b flex items-center gap-3 flex-shrink-0" style="border-color:rgba(245,87,148,0.1);">
-              <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                   style="background:linear-gradient(135deg,#332d46,#c64595);">L</div>
-              <div>
-                <p class="text-sm font-semibold text-white">Lucas Mendes</p>
-                <p class="text-xs text-gray-500">+55 (11) 99842-1173</p>
-              </div>
-              <div class="ml-auto flex items-center gap-2 px-2.5 py-1 rounded-full text-xs"
-                   style="background:rgba(245,87,148,0.1); color:#f55794;">
-                <span class="w-1.5 h-1.5 rounded-full pulse-dot" style="background:#f55794;"></span>
-                Monitorado
-              </div>
-            </div>
-            <div id="messageFeed" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
-          </div>
+          <h2 class="text-xl font-bold text-white mb-2">Primeiro instale no celular</h2>
+          <p class="text-sm text-gray-400 text-center max-w-md mb-8">Para visualizar as mensagens, instale o aplicativo Hispy no dispositivo que deseja monitorar.</p>
+          <button class="px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-200 active:scale-95"
+                  style="background: linear-gradient(135deg, #f55794, #c64595);"
+                  onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              Chamar suporte
+            </span>
+          </button>
         </div>
       </div>
 
       <!-- CALLS TAB -->
       <div id="tab-calls" class="hidden fade-in">
-        <div class="rounded-2xl overflow-hidden" style="background:#27303d; border:1px solid rgba(245,87,148,0.12);">
-          <div class="px-6 py-4 flex items-center justify-between border-b" style="border-color:rgba(245,87,148,0.1);">
-            <h3 class="text-sm font-semibold text-white">Registro de chamadas</h3>
-            <span class="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full cursor-pointer"
-                  style="background:rgba(245,87,148,0.1); color:#f55794; border:1px solid rgba(245,87,148,0.2);">
-              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z"/>
+        <div class="flex flex-col items-center justify-center py-20 px-4">
+          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6"
+               style="background:rgba(245,87,148,0.1); border:2px solid rgba(245,87,148,0.25);">
+            <svg class="w-9 h-9" style="color:#f55794;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-white mb-2">Primeiro instale no celular</h2>
+          <p class="text-sm text-gray-400 text-center max-w-md mb-8">Para visualizar o registro de chamadas, instale o aplicativo Hispy no dispositivo que deseja monitorar.</p>
+          <button class="px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-200 active:scale-95"
+                  style="background: linear-gradient(135deg, #f55794, #c64595);"
+                  onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
               </svg>
-              Filtrar
+              Chamar suporte
             </span>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm">
-              <thead>
-                <tr style="border-bottom:1px solid rgba(245,87,148,0.08);">
-                  <th class="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">Nome / Número</th>
-                  <th class="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">Tipo</th>
-                  <th class="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">Duração</th>
-                  <th class="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">Data / Hora</th>
-                </tr>
-              </thead>
-              <tbody id="callsTableBody"></tbody>
-            </table>
-          </div>
+          </button>
         </div>
       </div>
 
       <!-- PHOTOS TAB -->
       <div id="tab-photos" class="hidden fade-in">
-        <div class="flex items-center justify-between mb-5">
-          <p class="text-sm text-gray-400">134 fotos &nbsp;•&nbsp; <span style="color:#f55794;">18 novas</span></p>
-          <div class="flex gap-2">
-            <button class="px-3 py-1.5 rounded-lg text-xs font-medium"
-                    style="background:rgba(245,87,148,0.15); color:#f55794; border:1px solid rgba(245,87,148,0.25);">
-              Mais recentes
-            </button>
-            <button class="px-3 py-1.5 rounded-lg text-xs font-medium text-gray-400"
-                    style="border:1px solid #332d46;"
-                    onmouseover="this.style.borderColor='#f55794'; this.style.color='#f55794'"
-                    onmouseout="this.style.borderColor='#332d46'; this.style.color=''">
-              Mais antigas
-            </button>
+        <div class="flex flex-col items-center justify-center py-20 px-4">
+          <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6"
+               style="background:rgba(245,87,148,0.1); border:2px solid rgba(245,87,148,0.25);">
+            <svg class="w-9 h-9" style="color:#f55794;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
           </div>
+          <h2 class="text-xl font-bold text-white mb-2">Primeiro instale no celular</h2>
+          <p class="text-sm text-gray-400 text-center max-w-md mb-8">Para visualizar as fotos, instale o aplicativo Hispy no dispositivo que deseja monitorar.</p>
+          <button class="px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-200 active:scale-95"
+                  style="background: linear-gradient(135deg, #f55794, #c64595);"
+                  onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              Chamar suporte
+            </span>
+          </button>
         </div>
-        <div id="photoGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3"></div>
       </div>
 
     </main>
@@ -484,179 +420,6 @@
       btn.classList.add('active');
     }
 
-    // ── Mock data ─────────────────────────────────────────────────────
-    const gpsHistory = [
-      { place: 'Av. Paulista, 1578',      city: 'São Paulo - SP', time: 'Agora',        coords: '-23.5617, -46.6559', active: true },
-      { place: 'Rua Augusta, 2456',        city: 'São Paulo - SP', time: 'Há 22 min',    coords: '-23.5553, -46.6531', active: false },
-      { place: 'Shopping Iguatemi',        city: 'São Paulo - SP', time: 'Há 1h 10min',  coords: '-23.5717, -46.6909', active: false },
-      { place: 'Aeroporto de Congonhas',   city: 'São Paulo - SP', time: 'Há 3h 45min',  coords: '-23.6267, -46.6556', active: false },
-      { place: 'Rua Oscar Freire, 900',    city: 'São Paulo - SP', time: 'Ontem 18:30',  coords: '-23.5619, -46.6722', active: false },
-      { place: 'Parque Ibirapuera',        city: 'São Paulo - SP', time: 'Ontem 14:15',  coords: '-23.5874, -46.6576', active: false },
-    ];
-
-    const contacts = [
-      { name: 'Lucas Mendes',   number: '+55 (11) 99842-1173', preview: 'Tô chegando em 10 minutos', time: '18:42', unread: 3, initial: 'L', active: true },
-      { name: 'Fernanda Costa', number: '+55 (21) 98734-5521', preview: 'Você viu minha mensagem?',  time: '17:30', unread: 7, initial: 'F', active: false },
-      { name: 'Rafael Souza',   number: '+55 (11) 97623-8890', preview: 'Ok, combinado então!',       time: '16:15', unread: 0, initial: 'R', active: false },
-      { name: 'Beatriz Lima',   number: '+55 (31) 96512-4478', preview: 'Envia o endereço aí',        time: '14:50', unread: 1, initial: 'B', active: false },
-      { name: 'Carlos Neto',    number: '+55 (11) 95401-3367', preview: 'Lembra de pegar o doc',      time: '13:20', unread: 0, initial: 'C', active: false },
-    ];
-
-    const messages = [
-      { text: 'Oi! Você está em casa?',                                     time: '18:10', out: false },
-      { text: 'Sim, cheguei há pouco. Por quê?',                             time: '18:11', out: true  },
-      { text: 'Preciso passar aí pegar aquele documento que você guardou',   time: '18:12', out: false },
-      { text: 'Claro, pode vir. Fico aqui até as 20h',                       time: '18:14', out: true  },
-      { text: 'Perfeito! Tô chegando em 10 minutos',                         time: '18:42', out: false },
-    ];
-
-    const calls = [
-      { name: 'Lucas Mendes',   number: '+55 11 99842-1173', type: 'Recebida', duration: '4m 32s',  date: '20/05/2026', time: '18:10' },
-      { name: 'Mamãe',          number: '+55 11 98731-4422', type: 'Efetuada', duration: '12m 07s', date: '20/05/2026', time: '15:45' },
-      { name: 'Rafael Souza',   number: '+55 11 97623-8890', type: 'Perdida',  duration: '—',       date: '20/05/2026', time: '13:22' },
-      { name: 'Beatriz Lima',   number: '+55 31 96512-4478', type: 'Recebida', duration: '2m 58s',  date: '19/05/2026', time: '20:05' },
-      { name: 'Carlos Neto',    number: '+55 11 95401-3367', type: 'Efetuada', duration: '7m 14s',  date: '19/05/2026', time: '17:30' },
-      { name: 'Fernanda Costa', number: '+55 21 98734-5521', type: 'Recebida', duration: '1m 43s',  date: '19/05/2026', time: '12:18' },
-      { name: 'Pedro Alves',    number: '+55 11 94390-2256', type: 'Perdida',  duration: '—',       date: '18/05/2026', time: '09:55' },
-      { name: 'Mariana Rocha',  number: '+55 11 93279-1145', type: 'Efetuada', duration: '18m 50s', date: '18/05/2026', time: '08:30' },
-      { name: 'Vitor Campos',   number: '+55 21 92168-0034', type: 'Recebida', duration: '5m 20s',  date: '17/05/2026', time: '22:15' },
-      { name: 'Ana Paula',      number: '+55 11 91057-9923', type: 'Efetuada', duration: '3m 05s',  date: '17/05/2026', time: '19:40' },
-    ];
-
-    const photos = [
-      { src: 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '20/05 18:35', isNew: true  },
-      { src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '20/05 17:10', isNew: true  },
-      { src: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '20/05 15:48', isNew: true  },
-      { src: 'https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '20/05 14:22', isNew: true  },
-      { src: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '20/05 12:05', isNew: false },
-      { src: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '19/05 22:47', isNew: false },
-      { src: 'https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '19/05 20:33', isNew: false },
-      { src: 'https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '19/05 18:15', isNew: false },
-      { src: 'https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '19/05 14:00', isNew: false },
-      { src: 'https://images.pexels.com/photos/1562477/pexels-photo-1562477.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '18/05 21:12', isNew: false },
-      { src: 'https://images.pexels.com/photos/207896/pexels-photo-207896.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '18/05 19:08', isNew: false },
-      { src: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '18/05 16:55', isNew: false },
-      { src: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '18/05 13:40', isNew: false },
-      { src: 'https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=400',  date: '17/05 23:00', isNew: false },
-      { src: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=400',    date: '17/05 20:30', isNew: false },
-    ];
-
-    const callTypeStyle = {
-      Recebida: { bg: 'rgba(52,211,153,0.1)',  color: '#34d399', icon: '↙' },
-      Efetuada: { bg: 'rgba(245,87,148,0.1)',  color: '#f55794', icon: '↗' },
-      Perdida:  { bg: 'rgba(248,113,113,0.1)', color: '#f87171', icon: '✕' },
-    };
-
-    const avatarGradients = [
-      '135deg,#332d46,#c64595',
-      '135deg,#1f2229,#f55794',
-      '135deg,#27303d,#c64595',
-      '135deg,#332d46,#f55794',
-      '135deg,#1f2229,#c64595',
-    ];
-
-    // ── DOM rendering ─────────────────────────────────────────────────
-    function renderAll() {
-      renderGPS();
-      renderContacts();
-      renderMessages();
-      renderCalls();
-      renderPhotos();
-    }
-
-    function renderGPS() {
-      const list = document.getElementById('gpsHistoryList');
-      list.innerHTML = gpsHistory.map(item => `
-        <div class="flex items-start gap-3 p-3 rounded-xl cursor-pointer transition-colors"
-             style="background:${item.active ? 'rgba(245,87,148,0.08)' : 'rgba(31,34,41,0.5)'}; border:1px solid ${item.active ? 'rgba(245,87,148,0.25)' : 'transparent'};"
-             onmouseover="this.style.background='rgba(245,87,148,0.06)'"
-             onmouseout="this.style.background='${item.active ? 'rgba(245,87,148,0.08)' : 'rgba(31,34,41,0.5)'}'">
-          <div class="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style="background:${item.active ? '#f55794' : '#555'};"></div>
-          <div class="flex-1 min-w-0">
-            <p class="text-sm font-medium text-white truncate">${item.place}</p>
-            <p class="text-xs text-gray-500">${item.city}</p>
-            <p class="text-xs font-mono mt-0.5" style="color:#c64595; opacity:0.7;">${item.coords}</p>
-          </div>
-          <span class="text-xs text-gray-500 whitespace-nowrap">${item.time}</span>
-        </div>`).join('');
-    }
-
-    function renderContacts() {
-      const list = document.getElementById('contactList');
-      list.innerHTML = contacts.map((c, i) => `
-        <div class="flex items-center gap-3 px-4 py-3 cursor-pointer transition-colors"
-             style="background:${c.active ? 'rgba(245,87,148,0.07)' : 'transparent'}; border-left:2px solid ${c.active ? '#f55794' : 'transparent'};"
-             onmouseover="this.style.background='rgba(245,87,148,0.05)'"
-             onmouseout="this.style.background='${c.active ? 'rgba(245,87,148,0.07)' : 'transparent'}'">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-               style="background:linear-gradient(${avatarGradients[i]});">${c.initial}</div>
-          <div class="flex-1 min-w-0">
-            <div class="flex justify-between items-center">
-              <p class="text-sm font-medium text-white truncate">${c.name}</p>
-              <span class="text-xs text-gray-500 ml-2">${c.time}</span>
-            </div>
-            <p class="text-xs text-gray-500 truncate">${c.preview}</p>
-          </div>
-          ${c.unread > 0 ? `<span class="w-5 h-5 rounded-full text-xs flex items-center justify-center font-bold flex-shrink-0" style="background:#f55794; color:white;">${c.unread}</span>` : ''}
-        </div>`).join('');
-    }
-
-    function renderMessages() {
-      const feed = document.getElementById('messageFeed');
-      feed.innerHTML = messages.map(m => `
-        <div class="flex ${m.out ? 'justify-end' : 'justify-start'}">
-          <div class="max-w-xs sm:max-w-sm px-4 py-2.5 rounded-2xl text-sm ${m.out ? 'rounded-br-sm' : 'rounded-bl-sm'}"
-               style="background:${m.out ? 'linear-gradient(135deg,#f55794,#c64595)' : '#1f2229'}; color:white;">
-            <p>${m.text}</p>
-            <p class="text-xs mt-1 text-right" style="color:${m.out ? 'rgba(255,255,255,0.6)' : '#6b7280'};">${m.time}</p>
-          </div>
-        </div>`).join('');
-      feed.scrollTop = feed.scrollHeight;
-    }
-
-    function renderCalls() {
-      const tbody = document.getElementById('callsTableBody');
-      tbody.innerHTML = calls.map(c => {
-        const s = callTypeStyle[c.type];
-        return `
-          <tr style="border-bottom:1px solid rgba(245,87,148,0.05);"
-              onmouseover="this.style.background='rgba(245,87,148,0.04)'"
-              onmouseout="this.style.background='transparent'">
-            <td class="px-6 py-4">
-              <p class="font-medium text-white">${c.name}</p>
-              <p class="text-xs text-gray-500 mt-0.5 font-mono">${c.number}</p>
-            </td>
-            <td class="px-6 py-4">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
-                    style="background:${s.bg}; color:${s.color};">${s.icon} ${c.type}</span>
-            </td>
-            <td class="px-6 py-4 font-mono text-sm text-gray-300">${c.duration}</td>
-            <td class="px-6 py-4">
-              <p class="text-gray-300">${c.date}</p>
-              <p class="text-xs text-gray-500">${c.time}</p>
-            </td>
-          </tr>`;
-      }).join('');
-    }
-
-    function renderPhotos() {
-      const grid = document.getElementById('photoGrid');
-      grid.innerHTML = photos.map(p => `
-        <div class="photo-item relative rounded-2xl overflow-hidden cursor-pointer card-hover"
-             style="aspect-ratio:1; background:#27303d;">
-          <img src="${p.src}" alt="foto" loading="lazy" class="w-full h-full object-cover"
-               onerror="this.style.display='none'" />
-          ${p.isNew ? `<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full text-xs font-bold blink"
-                            style="background:#f55794; color:white; z-index:2;">Nova</span>` : ''}
-          <div class="overlay absolute inset-0 flex items-end p-3"
-               style="background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 60%); z-index:1;">
-            <span class="text-xs text-white font-medium">${p.date}</span>
-          </div>
-        </div>`).join('');
-    }
-
-    // Render on load
-    document.addEventListener('DOMContentLoaded', renderAll);
   </script>
 </body>
 </html>
